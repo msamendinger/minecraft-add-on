@@ -7,6 +7,25 @@
     },
     "conditions": [
       {
+        "minecraft:spawns_underground": {},
+        "minecraft:brightness_filter": {
+          "min": 0,
+          "max": 7,
+          "adjust_for_weather": false
+        },
+        "minecraft:difficulty_filter": {
+          "min": "easy",
+          "max": "hard"
+        },
+        "minecraft:weight": {
+          "default": 20
+        },
+        "minecraft:herd": {
+          "min_size": 1,
+          "max_size": 2
+        }
+      },
+      {
         "minecraft:spawns_on_surface": {},
         "minecraft:brightness_filter": {
           "min": 0,
@@ -18,16 +37,11 @@
           "max": "hard"
         },
         "minecraft:weight": {
-          "default": 10
+          "default": 5
         },
         "minecraft:herd": {
           "min_size": 1,
-          "max_size": 2
-        },
-        "minecraft:biome_filter": {
-          "any_of": [
-            {"test": "has_biome_tag", "operator":"==", "value": "soul_sand_valley"}
-          ]
+          "max_size": 1
         }
       }
     ]
