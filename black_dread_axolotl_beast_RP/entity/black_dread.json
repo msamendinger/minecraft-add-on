@@ -1,0 +1,22 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "mob:black_dread",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/black_dread"
+      },
+      "geometry": {
+        "default": "geometry.black_dread"
+      },
+      "render_controllers": [ "controller.render.default" ],
+      "spawn_egg": {
+        "texture": "black_dread_spawn_egg",
+        "texture_index": 0
+      }
+    }
+  }
+}

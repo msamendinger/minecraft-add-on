@@ -1,0 +1,26 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "mob:axolotl_beast",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "lucy": "textures/entity/axolotl_beast_lucy",
+        "wild": "textures/entity/axolotl_beast_wild",
+        "gold": "textures/entity/axolotl_beast_gold",
+        "cyan": "textures/entity/axolotl_beast_cyan",
+        "blue": "textures/entity/axolotl_beast_blue"
+      },
+      "geometry": {
+        "default": "geometry.axolotl_beast"
+      },
+      "render_controllers": [ "controller.render.default" ],
+      "spawn_egg": {
+        "texture": "axolotl_beast_spawn_egg",
+        "texture_index": 0
+      }
+    }
+  }
+}

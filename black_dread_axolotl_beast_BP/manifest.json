@@ -1,0 +1,24 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "Black Dread and Axolotl Beast Behavior Pack",
+        "name": "Black Dread and Axolotl Beast BP",
+        "uuid": "d4d8a4c-8b2e-4b4f-b6e8-b7c1e3a2b1c2",
+        "version": [1, 0, 0],
+        "min_engine_version": [ 1, 16, 0 ]
+    },
+    "modules": [
+        {
+            "description": "Black Dread and Axolotl Beast Behaviors",
+            "type": "data",
+            "uuid": "b2e2c4e-9b4e-4e8b-b6e8-b7c1e3a2b1c2",
+            "version": [1, 0, 0]
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "f44259a4-1c44-4339-99a2-9d34c65d6131",
+            "version": [1, 0, 0]
+        }
+    ]
+}

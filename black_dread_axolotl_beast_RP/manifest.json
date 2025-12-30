@@ -1,0 +1,18 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "Black Dread and Axolotl Beast Resource Pack",
+        "name": "Black Dread and Axolotl Beast RP",
+        "uuid": "f44259a4-1c44-4339-99a2-9d34c65d6131",
+        "version": [1, 0, 0],
+        "min_engine_version": [ 1, 16, 0 ]
+    },
+    "modules": [
+        {
+            "description": "Black Dread and Axolotl Beast Resources",
+            "type": "resources",
+            "uuid": "a4d3b5a3-3984-4786-b5c9-6a3c1e4c7b8c",
+            "version": [1, 0, 0]
+        }
+    ]
+}
