@@ -11,16 +11,31 @@
       "minecraft:type_family": {
         "family": [ "monster", "mob" ]
       },
+      "minecraft:physics": {
+        "has_collision": true,
+        "has_gravity": true
+      },
+      "minecraft:nameable": {
+        "always_show": false,
+        "allow_name_tag_renaming": true
+      },
+      "minecraft:despawn": {},
+      "minecraft:knockback_resistance": {
+        "value": 0.5
+      },
       "minecraft:collision_box": {
         "width": 1.0,
         "height": 1.0
+      },
+      "minecraft:ground_offset": {
+        "value": 0.1
       },
       "minecraft:health": {
         "value": 80,
         "max": 80
       },
       "minecraft:movement": {
-        "value": 0.1
+        "value": 0.2
       },
       "minecraft:navigation.walk": {
         "can_path_over_water": false

@@ -11,6 +11,25 @@
       "minecraft:type_family": {
         "family": [ "monster", "mob" ]
       },
+      "minecraft:collision_box": {
+        "width": 1.0,
+        "height": 1.0
+      },
+      "minecraft:ground_offset": {
+        "value": 0.5
+      },
+      "minecraft:physics": {
+        "has_collision": true,
+        "has_gravity": true
+      },
+      "minecraft:nameable": {
+        "always_show": false,
+        "allow_name_tag_renaming": true
+      },
+      "minecraft:despawn": {},
+      "minecraft:knockback_resistance": {
+        "value": 0.8
+      },
       "minecraft:health": {
         "value": 300,
         "max": 300
