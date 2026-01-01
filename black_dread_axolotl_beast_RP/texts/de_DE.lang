@@ -1,0 +1,4 @@
+entity.mob:black_dread.name=Black Dread
+entity.mob:axolotl_beast.name=Axolotl Beast
+item.spawn_egg.entity.mob:black_dread.name=Spawn-Ei Black Dread
+item.spawn_egg.entity.mob:axolotl_beast.name=Spawn-Ei Axolotl Beast

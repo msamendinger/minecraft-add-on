@@ -1,0 +1,12 @@
+{
+  "resource_pack_name": "black_dread_axolotl_beast",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "black_dread_spawn_egg": {
+      "textures": "textures/items/black_dread_spawn_egg"
+    },
+    "axolotl_beast_spawn_egg": {
+      "textures": "textures/items/axolotl_beast_spawn_egg"
+    }
+  }
+}
