@@ -23,14 +23,9 @@ jobs:
           echo "No RP or BP folder found ending in _RP or _BP at the root of the repository."
           exit 1
         fi
-        if [ -n "$RP_FOLDER" ]; then
-            ADDON_NAME=$(basename "$RP_FOLDER" _RP)
-        else
-            ADDON_NAME=$(basename "$BP_FOLDER" _BP)
-        fi
         echo "rp_folder=${RP_FOLDER}" >> $GITHUB_OUTPUT
         echo "bp_folder=${BP_FOLDER}" >> $GITHUB_OUTPUT
-        echo "addon_name=${ADDON_NAME}" >> $GITHUB_OUTPUT
+        echo "addon_name=axolotl_beast-black_dread" >> $GITHUB_OUTPUT
 
     - name: Create Resource Pack
       if: steps.get_names.outputs.rp_folder != ''
