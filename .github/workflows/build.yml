@@ -1,0 +1,52 @@
+name: Build Minecraft Add-On
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Get folder and addon names
+      id: get_names
+      run: |
+        RP_FOLDER=$(find . -maxdepth 1 -type d -name "*_RP" | head -n 1 | sed 's|./||')
+        BP_FOLDER=$(find . -maxdepth 1 -type d -name "*_BP" | head -n 1 | sed 's|./||')
+        if [ -z "$RP_FOLDER" ] && [ -z "$BP_FOLDER" ]; then
+          echo "No RP or BP folder found ending in _RP or _BP at the root of the repository."
+          exit 1
+        fi
+        if [ -n "$RP_FOLDER" ]; then
+            ADDON_NAME=$(basename "$RP_FOLDER" _RP)
+        else
+            ADDON_NAME=$(basename "$BP_FOLDER" _BP)
+        fi
+        echo "rp_folder=${RP_FOLDER}" >> $GITHUB_OUTPUT
+        echo "bp_folder=${BP_FOLDER}" >> $GITHUB_OUTPUT
+        echo "addon_name=${ADDON_NAME}" >> $GITHUB_OUTPUT
+
+    - name: Create Resource Pack
+      if: steps.get_names.outputs.rp_folder != ''
+      run: zip -r ../${{ steps.get_names.outputs.addon_name }}_RP.mcpack .
+      working-directory: ${{ steps.get_names.outputs.rp_folder }}
+
+    - name: Create Behavior Pack
+      if: steps.get_names.outputs.bp_folder != ''
+      run: zip -r ../${{ steps.get_names.outputs.addon_name }}_BP.mcpack .
+      working-directory: ${{ steps.get_names.outputs.bp_folder }}
+
+    - name: Create Add-On
+      run: zip ${{ steps.get_names.outputs.addon_name }}.mcaddon *_RP.mcpack *_BP.mcpack
+
+    - name: Upload Add-On Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: ${{ steps.get_names.outputs.addon_name }}
+        path: ${{ steps.get_names.outputs.addon_name }}.mcaddon
